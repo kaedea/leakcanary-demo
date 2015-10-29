@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".fragmentleak.FragmentLeakActivity">
         </activity>
+        <activity android:name=".singleton.SingletonActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import me.kaede.leakcanarydemo.fragmentleak.FragmentLeakActivity;
 import me.kaede.leakcanarydemo.home.ActivityHolder;
 import me.kaede.leakcanarydemo.home.view.IHomeView;
 import me.kaede.leakcanarydemo.localvariable.LocalVariableActivity;
+import me.kaede.leakcanarydemo.singleton.SingletonActivity;
 
 
 /**
@@ -22,6 +23,7 @@ public class HomePresenterCompl implements IHomePresenter {
 		activityHolder.addActivity("Local Variable Leak", LocalVariableActivity.class);
 		activityHolder.addActivity("Activity Leak", ActivityLeakActivity.class);
 		activityHolder.addActivity("Fragment Leak", FragmentLeakActivity.class);
+		activityHolder.addActivity("Singleton Leak", SingletonActivity.class);
 	}
 
 	Context context;

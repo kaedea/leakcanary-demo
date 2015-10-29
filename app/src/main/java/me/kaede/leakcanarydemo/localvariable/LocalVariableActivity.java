@@ -10,7 +10,7 @@ public class LocalVariableActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_localvariable_leak);
 
 		Cat cat = new Cat();
 		Box box = new Box();
