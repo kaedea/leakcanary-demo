@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="me.kaede.leakcanarydemo">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
             android:name=".ExampleApplication"
@@ -13,8 +13,7 @@
             android:theme="@style/AppTheme">
         <activity
                 android:name=".localvariable.LocalVariableActivity"
-                android:label="@string/app_name"
-                >
+                android:label="@string/app_name">
         </activity>
         <activity android:name=".home.HomeActivity">
             <intent-filter>
@@ -22,6 +21,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".activityleak.ActivityLeakActivity">
+        </activity>
+        <activity android:name=".fragmentleak.FragmentLeakActivity">
         </activity>
     </application>
 

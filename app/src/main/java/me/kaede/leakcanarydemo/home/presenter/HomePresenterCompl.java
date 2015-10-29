@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
+import me.kaede.leakcanarydemo.activityleak.ActivityLeakActivity;
+import me.kaede.leakcanarydemo.fragmentleak.FragmentLeakActivity;
 import me.kaede.leakcanarydemo.home.ActivityHolder;
 import me.kaede.leakcanarydemo.home.view.IHomeView;
 import me.kaede.leakcanarydemo.localvariable.LocalVariableActivity;
@@ -14,13 +16,16 @@ import me.kaede.leakcanarydemo.localvariable.LocalVariableActivity;
  */
 public class HomePresenterCompl implements IHomePresenter {
 	public static ActivityHolder activityHolder;
+
 	static {
 		activityHolder = new ActivityHolder();
-		activityHolder.addActivity("Local Variable Leak",LocalVariableActivity.class);
+		activityHolder.addActivity("Local Variable Leak", LocalVariableActivity.class);
+		activityHolder.addActivity("Activity Leak", ActivityLeakActivity.class);
+		activityHolder.addActivity("Fragment Leak", FragmentLeakActivity.class);
+	}
 
-}
-Context context;
-IHomeView homeView;
+	Context context;
+	IHomeView homeView;
 
 	public HomePresenterCompl(Context context, IHomeView homeView) {
 		this.context = context;
@@ -36,13 +41,13 @@ IHomeView homeView;
 			public void run() {
 				homeView.onGetDataList(activityHolder.getNameList());
 			}
-		},2000);
+		}, 2000);
 	}
 
 	@Override
 	public void onItemClick(int position) {
 		Class activity = activityHolder.getActivity(activityHolder.getNameList().get(position));
-		if (activity!=null){
+		if (activity != null) {
 			context.startActivity(new Intent(context, activity));
 		}
 	}

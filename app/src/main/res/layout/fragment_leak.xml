@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="me.kaede.leakcanarydemo.fragmentleak.LeakFragment">
+
+    <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="Now press Back to close this Activity quickly. \n\nLeakCanary should watch leak of the Fragment, because a background task is referencing it!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</FrameLayout>
