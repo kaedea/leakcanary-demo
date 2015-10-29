@@ -71,21 +71,4 @@ public class HomeActivity extends ActionBarActivity implements AdapterView.OnIte
 	}
 
 
-	/*@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.menu_main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_github) {
-			Intent intent = new Intent(Intent.ACTION_VIEW);
-			intent.setData(Uri.parse("https://github.com/kaedea/"));
-			startActivity(intent);
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}*/
 }

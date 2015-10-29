@@ -5,8 +5,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="me.kaede.leakcanarydemo.singleton.SingletonActivity">
-        <LinearLayout android:onClick="onToast" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="40dp" android:gravity="center">
-                <TextView android:background="#ddd" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="TOAST"/>
+        <LinearLayout android:background="#ddd" android:layout_width="match_parent" android:layout_height="40dp" android:gravity="center">
+                <TextView android:onClick="onToast" android:background="?attr/selectableItemBackground" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="TOAST"/>
         </LinearLayout>
 
 </RelativeLayout>

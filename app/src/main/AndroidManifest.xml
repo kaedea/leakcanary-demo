@@ -28,6 +28,8 @@
         </activity>
         <activity android:name=".singleton.SingletonActivity">
         </activity>
+        <activity android:name=".viewleak.ViewLeakActivity">
+        </activity>
     </application>
 
 </manifest>
