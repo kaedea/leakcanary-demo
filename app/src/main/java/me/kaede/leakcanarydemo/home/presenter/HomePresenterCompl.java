@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import me.kaede.leakcanarydemo.activityleak.ActivityLeakActivity;
+import me.kaede.leakcanarydemo.application.ApplicationActivity;
 import me.kaede.leakcanarydemo.fragmentleak.FragmentLeakActivity;
 import me.kaede.leakcanarydemo.home.ActivityHolder;
 import me.kaede.leakcanarydemo.home.view.IHomeView;
@@ -26,6 +27,7 @@ public class HomePresenterCompl implements IHomePresenter {
 		activityHolder.addActivity("Fragment Leak", FragmentLeakActivity.class);
 		activityHolder.addActivity("View Leak", ViewLeakActivity.class);
 		activityHolder.addActivity("Singleton Leak", SingletonActivity.class);
+		activityHolder.addActivity("Referenced in Application", ApplicationActivity.class);
 	}
 
 	Context context;
@@ -45,7 +47,7 @@ public class HomePresenterCompl implements IHomePresenter {
 			public void run() {
 				homeView.onGetDataList(activityHolder.getNameList());
 			}
-		}, 2000);
+		}, 1000);
 	}
 
 	@Override

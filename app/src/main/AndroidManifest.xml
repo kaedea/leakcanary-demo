@@ -22,13 +22,23 @@
                 android:name=".localvariable.LocalVariableActivity"
                 android:label="Local Variable Leak">
         </activity>
-        <activity android:name=".activityleak.ActivityLeakActivity" android:label="Activity Leak">
+        <activity
+                android:name=".activityleak.ActivityLeakActivity"
+                android:label="Activity Leak">
         </activity>
-        <activity android:name=".fragmentleak.FragmentLeakActivity" android:label="Fragment Leak">
+        <activity
+                android:name=".fragmentleak.FragmentLeakActivity"
+                android:label="Fragment Leak">
         </activity>
-        <activity android:name=".singleton.SingletonActivity" android:label="Singleton Leak">
+        <activity
+                android:name=".singleton.SingletonActivity"
+                android:label="Singleton Leak">
         </activity>
-        <activity android:name=".viewleak.ViewLeakActivity" android:label="View Leak">
+        <activity
+                android:name=".viewleak.ViewLeakActivity"
+                android:label="View Leak">
+        </activity>
+        <activity android:name=".application.ApplicationActivity" android:label="Referenced in Application">
         </activity>
     </application>
 
